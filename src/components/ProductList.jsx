@@ -1,8 +1,8 @@
 import ProductItem from "./ProductItem"
-import products from "../json/products.json"
+//import products from "../json/products.json"
 import { Col, Row } from "antd";
 
-export default function ProducList() {
+export default function ProducList({products}) {
   return (
     <div>
       <article className="image__layout py-3 py-sm-5">
@@ -13,15 +13,14 @@ export default function ProducList() {
             <Row gutter={[32, 32]}>
               {
                 products.map(
-                  product => (
+                  (product , key) => (
                     <Col
-                      key={product.id}
                       sm={{ span: 12 }}
                       lg={{ span: 8 }}
                       xl={{ span: 6 }}
                       xxl={{ span: 4 }}
                     >
-                      <ProductItem product={product} />
+                      <ProductItem key={key} product={product} />
                     </Col>
                   )
                 )

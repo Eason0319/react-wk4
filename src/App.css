@@ -40,3 +40,28 @@
 .read-the-docs {
   color: #888;
 }
+
+main-layout{
+  display: grid;
+  min-height: 100vh;
+  grid-template-areas:
+  'headre'
+  'productlist'
+  'footer'
+  
+  ;
+  grid-template-rows: auto 1fr auto;
+  gap: 1rem;
+}
+
+.layoutHeader{
+  grid-area: header;
+}
+
+.layoutContent{
+  grid-area: content;
+}
+
+.layoutFooter{
+  grid-area: footer;
+}
